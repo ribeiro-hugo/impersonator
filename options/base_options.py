@@ -9,7 +9,7 @@ class BaseOptions(object):
         self._initialized = False
 
     def initialize(self):
-        self._parser.add_argument('--checkpoints_dir', type=str, default='./outputs/checkpoints/',
+        self._parser.add_argument('--checkpoints_dir', type=str, default='./outputs/ckpt/',
                                   help='models are saved here')
 
         self._parser.add_argument('--data_dir', type=str, default='/p300/datasets/iPER', help='path to dataset')
@@ -34,7 +34,7 @@ class BaseOptions(object):
         self._parser.add_argument('--load_epoch', type=int, default=-1,
                                   help='which epoch to load? set to -1 to use latest cached model')
         self._parser.add_argument('--load_path', type=str,
-                                  default='./outputs/checkpoints/lwb_imper_fashion_place/net_epoch_30_id_G.pth',
+                                  default='./outputs/ckpt/lwb_imper_fashion_place/net_epoch_30_id_G.pth',
                                   help='pretrained model path')
         self._parser.add_argument('--batch_size', type=int, default=4, help='input batch size')
         self._parser.add_argument('--time_step', type=int, default=10, help='time step size')
