@@ -12,10 +12,10 @@ class TestOptions(BaseOptions):
                                   help='prior image path')
 
         self._parser.add_argument('--bg_model', type=str,
-                                  default='./outputs/checkpoints/deepfillv2/net_epoch_50_id_G.pth',
+                                  default='./outputs/ckpt/deepfillv2/net_epoch_50_id_G.pth',
                                   help='if it is `ORIGINAL`, it will use the '
                                        'original BGNet of the generator of LiquidWarping GAN, '
-                                       'otherwise, set it as `./outputs/checkpoints/deepfillv2/net_epoch_50_id_G.pth`, '
+                                       'otherwise, set it as `./outputs/ckpt/deepfillv2/net_epoch_50_id_G.pth`, '
                                        'and it will use a pretrained deepfillv2 background inpaintor (default).')
 
         self._parser.add_argument('--bg_ks', default=13, type=int, help='dilate kernel size of background mask.')
